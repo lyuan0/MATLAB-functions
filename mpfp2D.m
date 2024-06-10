@@ -1,11 +1,11 @@
 %% Function:    mpfp2D
 % Description:  use scatteredInterpolant to get displacement field
 function D = mpfp2D(mp,fp,sz,methods)
-% Input:    mp/fp, n*2
+% Input:    mp/fp, n*2, xy-coordinates of moving and fixed points
 %           sz, vector, output image size
+%           methods, str, interpolant methods for scatteredInterpolant
 % Output:   D, double, displacement field of x & y
-%           i.e. tfImage =  imwarp(im,iD)
-%           methods, str, methods for scatteredInterpolant
+%           i.e. tfImage =  imwarp(image,D)
 
 % Point difference
 pDiff = fp-mp;
